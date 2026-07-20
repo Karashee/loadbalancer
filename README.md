@@ -254,7 +254,7 @@ docker ps --filter network=net1
 
 - **[README.md](README.md)** - This file (quick start and usage)
 
-- **[QUICK_REFERENCE.md](QUICK_REFERENCE.md)** - Essential commands cheat sheet
+
 - **Analysis Results** - See `results/` directory for charts:
   - `a1_distribution.png` - Load distribution test
   - `a2_scalability.png` - Scalability analysis
