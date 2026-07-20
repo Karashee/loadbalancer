@@ -3,8 +3,8 @@
 A distributed load balancer implementation with consistent hashing.
 
 Group Members:
-Joy Cherutich - 157463
-Andrew Karanja - 167144
+Joy Cherutich - 157463;
+Andrew Karanja - 167144;
 Zahra Isiaho - 169652
 
 ## Quick Start
