@@ -1,0 +1,26 @@
+services:
+  # Load Balancer service
+  load_balancer:
+    build:
+      context: .
+      dockerfile: Dockerfile.lb
+    image: load_balancer:latest
+    container_name: load_balancer
+    privileged: true
+    ports:
+      - "5000:5000"
+    volumes:
+      # Mount Docker socket for Docker-in-Docker (container management)
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - net1
+    environment:
+      - LB_PORT=5000
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+
+networks:
+  # Network for all containers (LB and server replicas)
+  net1:
+    external: true
+    name: net1
